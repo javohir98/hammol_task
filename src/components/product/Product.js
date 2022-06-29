@@ -57,8 +57,8 @@ const Product = ({product}) => {
                     </div>
                     <div className="product-counter">
                         <button className='inc'><AiOutlinePlus /></button>
-                        <span>1</span>
-                        <button className='dec'><AiOutlineMinus /></button>
+                        {/* <span>1</span>
+                        <button className='dec'><AiOutlineMinus /></button> */}
                     </div>
                 </div>
             </div>

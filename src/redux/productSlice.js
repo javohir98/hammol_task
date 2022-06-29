@@ -58,6 +58,7 @@ const productSlice = createSlice({
 })
 
 export const getProductsState = (state) => state.products.products.products
+export const getCategories = (state) => state.products.categories
 export const getProductStatus = (state) => state.products.status
 
 export const { getProducts } = productSlice.actions

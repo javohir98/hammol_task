@@ -3,6 +3,16 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchCategories, fetchProducts, getProductsState, getProductStatus } from '../redux/productSlice'
 import { Link } from 'react-router-dom'
 import Product from '../components/product/Product'
+import styled from 'styled-components'
+import FilterCategory from '../components/FilterCategory'
+import ProductGridList from '../components/ProductGridList'
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  height: unset;
+  margin: -0.75rem;
+`;
 
 const ProductsList = () => {
   const productsStatus = useSelector(getProductStatus)
@@ -28,13 +38,10 @@ const ProductsList = () => {
   }, [filter.name, filter.category, filter.limit, filter.offset])
 
   return (
-    <div>
-      {productsData && productsData.map(item => (
-        // <h5><Link to={`product/${item.id}`}>{item.title}</Link></h5>
-        <Product product={item} />
-        ))}
-        <button onClick={() => setFilter({...filter, offset: 2})}>dec</button>
-    </div>
+    <Container>
+      <FilterCategory />
+      <ProductGridList productsData={productsData} />
+    </Container>
   )
 }
 
