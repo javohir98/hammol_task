@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import ProductsList from './page/ProductsList'
-import ProductDetails from './page/ProductDetails'
+import ProductDetails from './page/product_details/ProductDetails'
 import styled from 'styled-components'
 
 const Container = styled.div`
