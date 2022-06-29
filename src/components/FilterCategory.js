@@ -46,16 +46,18 @@ const Category = styled.p`
     padding-top: 6px;
     padding-bottom: 6px;
     color: rgb(125, 135, 156);
+    cursor: pointer;
 `;
 
-const FilterCategory = () => {
+const FilterCategory = ({filterFunc}) => {
     const categories = useSelector(getCategories)
+
   return (
     <Container>
         <Wrapper>
             <H6>Categories</H6>
             {categories.map(item => (
-                <Category>{item}</Category>
+                <Category key={item} onClick={() => filterFunc(item)}>{item}</Category>
             ))}
         </Wrapper>
     </Container>

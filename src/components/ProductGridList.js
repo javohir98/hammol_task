@@ -13,7 +13,7 @@ const Container = styled.div`
 
     @media only screen and (min-width: 1025px) {
         & {
-           width: 75%;
+           width: 100%;
        }
     }
 `;
@@ -32,9 +32,8 @@ const ProductGridList = ({productsData}) => {
     <Container>
         <div>
             <ProductWrapper>
-
                 {productsData && productsData.map(item => (
-                    <Product product={item} />
+                    <Product key={item.title} product={item} />
                 ))}
             </ProductWrapper>
             <Pagination />

@@ -14,9 +14,15 @@
    }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 768px) {
     .product {
        width: 33.3333%;
+   }
+}
+
+@media only screen and (min-width: 1025px) {
+    .product {
+       width: 25%;
    }
 }
 
