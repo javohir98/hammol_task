@@ -43,6 +43,7 @@ const Product = ({product}) => {
                         <Link to={`/product/${product.id}`}>
                             <h3 className='details-title'>{product.title}</h3>
                         </Link>
+                        <h5 className='details-desc'>{product.description}</h5>
                         <div className='rate-container'>
                             <AiFillStar />
                             <AiFillStar />

@@ -159,6 +159,15 @@
     color: rgb(55, 63, 80);
 }
 
+.product-container:hover .details-content h3 {
+    color: rgb(233, 69, 96);
+}
+
+.details-desc {
+    /* font-size: 14px; */
+    font-weight: 400;
+}
+
 .rate-container {
     display: flex;
     margin: 0px -1px;
