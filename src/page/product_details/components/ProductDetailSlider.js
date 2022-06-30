@@ -89,10 +89,6 @@ const ProductDetailSlider = ({imagesData}) => {
   const [thumbSwiper, setThumbSwiper] = useState(null);
   const [nima, setNima] = useState(null)
 
-  useEffect(() => {
-    console.log(imagesData);
-  },[imagesData])
-
   return (
     <Container>
       <SelectImgBox>
@@ -103,7 +99,7 @@ const ProductDetailSlider = ({imagesData}) => {
           }}
           spaceBetween={10}
           navigation={false}
-          thumbs={{ swiper: thumbSwiper }}
+          thumbs={{ swiper: thumbSwiper && !thumbSwiper.destroyed ? thumbSwiper : null }}
           modules={[FreeMode, Navigation, Thumbs]}
           className="mySwiper2"
         >
@@ -116,7 +112,7 @@ const ProductDetailSlider = ({imagesData}) => {
       </SelectImgBox>
       <ImgSliderBox>
         <Swiper
-          onSwiper={setNima}
+          onSwiper={setThumbSwiper}
           spaceBetween={10}
           slidesPerView={4}
           freeMode={true}

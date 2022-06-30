@@ -26,7 +26,7 @@ const ProductsList = () => {
     name: '',
     category: '',
     limit: '10',
-    offset: 1
+    offset: ''
   })
   const dispatch = useDispatch()
 

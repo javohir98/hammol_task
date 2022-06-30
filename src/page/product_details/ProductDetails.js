@@ -8,7 +8,6 @@ import {
   ImgAndPriceContainer, 
   SpecificationAndReviewContainer 
 } from './ProductDetailsStyle'
-import ProductTabInfo from './components/ProductTabInfo'
 import { useParams } from 'react-router-dom'
 
 const ProductDetails = () => {
@@ -48,7 +47,7 @@ const ProductDetails = () => {
         </ImgAndPriceBox>
       </ImgAndPriceContainer>
       <SpecificationAndReviewContainer>
-        <ProductTabInfo />
+        {/* <ProductTabInfo /> */}
       </SpecificationAndReviewContainer>
     </Container>
   )
