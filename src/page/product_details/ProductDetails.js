@@ -43,6 +43,8 @@ const ProductDetails = () => {
             category={detail?.category}
             description={detail?.description}
             stock={detail?.stock}
+            rating={detail?.rating}
+            discount={detail?.discountPercentage}
           />
         </ImgAndPriceBox>
       </ImgAndPriceContainer>

@@ -111,7 +111,7 @@ const Store = styled.div`
 
 
 const ProductDetailPrice = (props) => {
-  const { name, price, brand, category, description, stock } = props
+  const { name, price, brand, category, description, stock, rating, discount } = props
   return (
     <Container>
       <H1>{name}</H1>
@@ -146,6 +146,13 @@ const ProductDetailPrice = (props) => {
             <AiOutlineStar />
           </InfoRatingContainer>
         </InfoRating>
+        ({rating})
+      </InfoContent>
+      <InfoContent>
+        <InfoContentSpan>
+          discountPercentage:
+        </InfoContentSpan>
+        <H6>{discount}</H6>
       </InfoContent>
       <PriceBlock>
         <H2>${price}.00</H2>
